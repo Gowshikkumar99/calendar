@@ -1,0 +1,102 @@
+@import '../../colors.scss';
+
+.popup-box {
+    background-color: $white;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1001;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    .close-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 5px;
+        background-color: $primary-blue;
+        border-radius: 50%;
+        border: none;
+        color: $white;
+        line-height: 0.7;
+    }
+
+    .popup-inner {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid $gray;
+        padding: 5px;
+
+        .popup-left,
+        .popup-right {
+            flex: 1;
+        }
+
+        .popup-left {
+            border-right: 1px solid $gray;
+            padding-right: 20px;
+
+            p {
+                margin-bottom: 10px;
+                line-height: 1.4;
+            }
+        }
+
+        .popup-files {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            .file-btn {
+                flex: 1;
+                background: none;
+                border: 1px solid $primary-blue;
+                border-radius: 5px;
+                color: $primary-blue;
+                text-align: left;
+                padding: 10px 20px 10px 10px;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .icon-wrapper {
+                    display: flex;
+                    gap: 10px;
+
+                    .icon {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+
+        .popup-right {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .meet-icon {
+                display: block;
+                margin: 0 auto 15px;
+                width: 80px;
+            }
+
+            .join-btn {
+                background-color: $primary-blue;
+                color: $white;
+                width: fit-content;
+                padding: 5px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+        }
+    }
+}

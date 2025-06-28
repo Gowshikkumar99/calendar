@@ -1,0 +1,105 @@
+@import '../../colors.scss';
+
+.rbc-toolbar {
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 767px) {
+        gap: 20px;
+    }
+
+    &-head {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &-create-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        font-size: 12px;
+        color: $primary-blue;
+
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &-today {
+        font-size: 25px;
+        color: $primary-blue;
+        padding: 3px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+    .rbc-btn-group {
+        display: flex;
+        gap: 15px;
+
+        > button:first-child:not(:last-child):not(.rbc-btn-nav) {
+            border: 1px solid $primary-blue;
+            border-radius: 5px;
+          }
+
+        > button:not(:first-child):not(:last-child):not(.rbc-btn-nav) {
+            border: 1px solid $primary-blue;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 0;
+            border: 0;
+            background: none;
+            box-shadow: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: none;
+                box-shadow: none;
+            }
+        }
+
+        .rbc-btn {
+            border: none;
+            padding: 0;
+            border-radius: 5px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .rbc-btn-nav {
+            position: relative;
+            border: 0;
+            &.active {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 100%;
+                    border-bottom: 2px solid $primary-blue;
+                }
+            }
+        }
+
+        .rbc-btn-left,.rbc-btn-right {
+            border: 1px solid $primary-blue;
+            padding: 5px;
+        }
+    }
+}
