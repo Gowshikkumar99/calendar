@@ -6,7 +6,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-big-calendar/lib/addons/dragAndDrop/styles.css';
 import '/src/components/Calendar/Mycalendar.scss';
 
-import EventModal from '/home/user/calendar/src/components/Modal/EventModal.jsx';
+import EventModal from '../Modal/EventModal.jsx';
 import CustomToolbar from '../CustomToolbar/CustomToolbar';
 import NestedEventModal from '../NestedModal/NestedModals.jsx';
 import CustomEvent from '../CustomEvent/CustomEvent.jsx';
