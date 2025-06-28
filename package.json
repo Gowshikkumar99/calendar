@@ -1,15 +1,18 @@
 {
   "name": "myapp",
+  "homepage": "https://Gowshikkumar99.github.io/Calendar",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy":"npm run deploy",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "moment": "^2.30.1",
     "react": "^19.1.0",
     "react-big-calendar": "^1.19.4",
@@ -28,5 +31,9 @@
     "globals": "^16.2.0",
     "sass": "^1.89.2",
     "vite": "^7.0.0"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "author": "",
+  "license": "ISC"
 }
