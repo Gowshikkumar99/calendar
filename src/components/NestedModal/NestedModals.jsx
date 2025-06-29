@@ -58,7 +58,7 @@ const NestedEventModal = ({
         {nestedEvents.map((ev, i) => (
           <div className="nested-event-card" key={i}>
             <div className="event-wrapper">
-              <div className="event-title">{ev.summary || ev.title}</div>
+              <div className="event-title">{ev.job_id.jobRequest_Title}</div>
               <div className="event-actions">
                 <button
                   className="edit-btn nested-btn"
@@ -80,11 +80,18 @@ const NestedEventModal = ({
               </div>
             </div>
             <div className="event-meta">
-              {ev.interviewer?.firstName && (
+              <div className="event-meta-row">
+                {ev.summary && (
+                  <div className="event-summary">{ev.summary}</div>
+                )}
+                <>|</>
+                {ev.interviewer?.firstName && (
                 <div className="event-interviewer">
                   Interviewer: {ev.interviewer.firstName}
                 </div>
               )}
+              </div>
+
               <div className="event-meta-row">
                 <div className="event-date">
                   Date: {moment(ev.start).format("DD MMM YYYY")}

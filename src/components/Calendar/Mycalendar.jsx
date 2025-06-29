@@ -62,21 +62,33 @@ const MyCalendar = () => {
 
     const element = e.currentTarget;
     const rect = element.getBoundingClientRect();
+    const isMobile = window.innerWidth <= 768;
+
     const offset = 15;
     const modalWidth = 260;
     const modalHeight = 180;
     const viewportWidth = window.innerWidth;
 
+    let top = rect.bottom + window.scrollY + offset;
     let left = rect.right + window.scrollX + offset;
-    if (rect.right + modalWidth + offset > viewportWidth) {
+
+    const fitsRight = rect.right + modalWidth + offset < viewportWidth;
+    const fitsLeft = rect.left - modalWidth - offset > 0;
+
+    if (fitsRight) {
+      left = rect.right + window.scrollX + offset;
+      top = rect.top + window.scrollY + rect.height / 2 - modalHeight / 2;
+    } else if (fitsLeft) {
       left = rect.left + window.scrollX - modalWidth - offset;
+      top = rect.top + window.scrollY + rect.height / 2 - modalHeight / 2;
+    } else {
+      left = rect.left + window.scrollX;
+      top = rect.bottom + window.scrollY + offset;
     }
 
-    const top = rect.top + window.scrollY + rect.height / 2 - modalHeight / 2;
     const position = { top, left };
 
     if (event.children) {
-      const isMobile = window.innerWidth <= 768;
       setModalPosition(isMobile ? "mobile" : position);
       setNestedEvents(event.children);
     } else {
@@ -111,13 +123,15 @@ const MyCalendar = () => {
         const combinedData = [...mainData, secondData];
 
         const mapped = combinedData.map((item) => ({
-          title: `${item.summary}\nInterviewer: ${item.user_det.handled_by.firstName}`,
+          title: `Interviewer: ${item.user_det.handled_by.firstName}`,
           start: new Date(item.start),
           end: new Date(item.end),
           link: item.link,
           candidate: item.user_det.candidate,
           interviewer: item.user_det.handled_by,
           score: item.score,
+          job_id: item.job_id,
+          summary: item.summary,
         }));
 
         const groupedMap = {};
@@ -130,7 +144,7 @@ const MyCalendar = () => {
         const grouped = Object.values(groupedMap).map((group) => {
           const first = group[0];
           return {
-            title: group.length > 1 ? "Multiple Interviews" : first.title,
+            title: first.title,
             start: new Date(first.start),
             end: new Date(first.end),
             children: group.length > 1 ? group : undefined,
@@ -139,6 +153,8 @@ const MyCalendar = () => {
             round: first.round,
             candidate: first.candidate,
             score: first.score,
+            job_id: first.job_id,
+            summary: first.summary,
           };
         });
 

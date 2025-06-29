@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import "../../colors.scss";
 
 .my-calendar-container {
   position: relative;
@@ -64,7 +64,6 @@
   justify-content: flex-end;
 }
 
-
 .custom-event {
   border-radius: 4px;
   font-size: 13px;
@@ -77,7 +76,7 @@
 
 .custom-event-left-bar {
   width: 5px;
-  background-color: #007bff;
+  background-color: $primary-blue;
   height: 100%;
   margin-right: 8px;
 }
@@ -87,7 +86,7 @@
   top: 0;
   right: 0px;
   background: #fdbf2d;
-  color: #000;
+  color: $black;
   font-weight: bold;
   padding: 5px 7px;
   border-radius: 50%;
@@ -101,12 +100,12 @@
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
-  background: white;
+  background: $white;
 }
 
 .nested-event-left-bar {
   width: 4px;
-  background: #007bff;
+  background: $primary-blue;
   margin-right: 10px;
 }
 
@@ -180,9 +179,7 @@
       }
 
       .rbc-time-header-cell {
-
         .rbc-header {
-
           button {
             margin: 10px 0;
           }
@@ -211,7 +208,7 @@
       .rbc-button-link {
         margin: 10px 0;
         font-weight: bold;
-        color: black;
+        color: $black;
       }
     }
 
@@ -224,6 +221,7 @@
       border-radius: 5px;
       padding: 10px 0 10px 10px;
       overflow: unset;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
   }
 }

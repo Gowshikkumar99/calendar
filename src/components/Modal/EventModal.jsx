@@ -13,7 +13,7 @@ const EventModal = ({ title, candidate, interviewer, start, end, link, closeModa
         <button className="close-btn" onClick={closeModal}>×</button>
         <div className="popup-inner">
           <div className="popup-left">
-            <p><strong>Interview With:</strong> {candidate?.firstName || 'N/A'}</p>
+            <p><strong>Interview With:</strong> {candidate?.candidate_firstName || 'N/A'}</p>
             <p><strong>Position:</strong> {title?.split('\n')[0] || 'N/A'}</p>
             <p><strong>Created By:</strong> {interviewer?.firstName || '-'}</p>
             <p><strong>Interview Date:</strong> {new Date(start).toLocaleDateString()}</p>
