@@ -6,7 +6,6 @@ import downloadIcon from '/src/assets/images/popup-icons/download-icon.png';
 
 const EventModal = ({ title, candidate, job_id, interviewer, start, end, link, closeModal, moment }) => {
   if (!title || !start || !end) return null;
-  console.log( interviewer)
   return (
     <div className="popup-overlay" onClick={closeModal}>
       <div className="popup-box" onClick={(e) => e.stopPropagation()}>

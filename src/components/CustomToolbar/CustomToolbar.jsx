@@ -101,7 +101,7 @@ const CustomToolbar = ({ date, view, onNavigate, onView }) => {
             }
             onClick={() => {
               changeView("agenda");
-              setYearFilter(new Date(date).getFullYear());
+              // setYearFilter(new Date(date).getFullYear());
             }}
           >
             Year
