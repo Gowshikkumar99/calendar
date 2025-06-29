@@ -1,10 +1,10 @@
-import React from 'react';
-import { navigate } from 'react-big-calendar/lib/utils/constants';
-import moment from 'moment';
-import leftArrow from '../../assets/images/customToolbar/left-arrow.png';
-import rightArrow from '../../assets/images/customToolbar/right-arrow.png';
-import plusIcon from '../../assets/images/common/plus-icon.png';
-import '../CustomToolbar/CustomToolbar.scss';
+import React from "react";
+import { navigate } from "react-big-calendar/lib/utils/constants";
+import moment from "moment";
+import leftArrow from "../../assets/images/customToolbar/left-arrow.png";
+import rightArrow from "../../assets/images/customToolbar/right-arrow.png";
+import plusIcon from "../../assets/images/common/plus-icon.png";
+import "../CustomToolbar/CustomToolbar.scss";
 
 const CustomToolbar = ({ date, view, onNavigate, onView }) => {
   const goToToday = () => {
@@ -24,12 +24,12 @@ const CustomToolbar = ({ date, view, onNavigate, onView }) => {
   };
 
   const formattedLabel = () => {
-    if (view === 'week') {
-      const start = moment(date).startOf('week');
-      const end = moment(date).endOf('week');
-      return `${start.format('DD MMMM')} to ${end.format('DD MMMM, YYYY')}`;
+    if (view === "week") {
+      const start = moment(date).startOf("week");
+      const end = moment(date).endOf("week");
+      return `${start.format("DD MMMM")} to ${end.format("DD MMMM, YYYY")}`;
     }
-    return moment(date).format('DD MMMM, YYYY');
+    return moment(date).format("DD MMMM, YYYY");
   };
 
   return (
@@ -50,17 +50,62 @@ const CustomToolbar = ({ date, view, onNavigate, onView }) => {
             <img src={rightArrow} alt="Next" />
           </button>
           <span className="rbc-toolbar-today" onClick={goToToday}>
-            {String(new Date().getDate()).padStart(2, '0')}
+            {String(new Date().getDate()).padStart(2, "0")}
           </span>
         </span>
 
-        <span className="rbc-toolbar-label"><strong>{formattedLabel()}</strong></span>
+        <span className="rbc-toolbar-label">
+          <strong>{formattedLabel()}</strong>
+        </span>
 
         <span className="rbc-btn-group">
-          <button type="button" className={view === 'day' ? 'rbc-btn-nav rbc-btn active' : 'rbc-btn-nav rbc-btn'} onClick={() => changeView('day')}>Day</button>
-          <button type="button" className={view === 'week' ? 'rbc-btn-nav rbc-btn active' : 'rbc-btn-nav rbc-btn'} onClick={() => changeView('week')}>Week</button>
-          <button type="button" className={view === 'month' ? 'rbc-btn-nav rbc-btn active' : 'rbc-btn-nav rbc-btn'} onClick={() => changeView('month')}>Month</button>
-          <button type="button" className={view === 'agenda' ? 'rbc-btn-nav rbc-btn active' : 'rbc-btn-nav rbc-btn'} onClick={() => changeView('agenda')}>Year</button>
+          <button
+            type="button"
+            className={
+              view === "day"
+                ? "rbc-btn-nav rbc-btn active"
+                : "rbc-btn-nav rbc-btn"
+            }
+            onClick={() => changeView("day")}
+          >
+            Day
+          </button>
+          <button
+            type="button"
+            className={
+              view === "week"
+                ? "rbc-btn-nav rbc-btn active"
+                : "rbc-btn-nav rbc-btn"
+            }
+            onClick={() => changeView("week")}
+          >
+            Week
+          </button>
+          <button
+            type="button"
+            className={
+              view === "month"
+                ? "rbc-btn-nav rbc-btn active"
+                : "rbc-btn-nav rbc-btn"
+            }
+            onClick={() => changeView("month")}
+          >
+            Month
+          </button>
+          <button
+            type="button"
+            className={
+              view === "agenda"
+                ? "rbc-btn-nav rbc-btn active"
+                : "rbc-btn-nav rbc-btn"
+            }
+            onClick={() => {
+              changeView("agenda");
+              setYearFilter(new Date(date).getFullYear());
+            }}
+          >
+            Year
+          </button>
         </span>
       </div>
     </>
