@@ -105,10 +105,6 @@ const MyCalendar = () => {
     return () => document.body.classList.remove("modal-open");
   }, [selectedEvent]);
 
-  // useEffect(() => {
-  //   document.body.classList.toggle("modal-open", !!nestedEvents);
-  //   return () => document.body.classList.remove("modal-open");
-  // }, [nestedEvents]);
 
   useEffect(() => {
     const fetchMain = fetch(
@@ -130,7 +126,7 @@ const MyCalendar = () => {
           candidate: item.user_det.candidate,
           interviewer: item.user_det.handled_by,
           score: item.score,
-          job_id: item.job_id,
+          job_id: item.user_det.job_id,
           summary: item.summary,
         }));
 
@@ -205,6 +201,7 @@ const MyCalendar = () => {
         start={selectedEvent?.start}
         end={selectedEvent?.end}
         link={selectedEvent?.link}
+        job_id={selectedEvent?.job_id}
         closeModal={closeModal}
         moment={moment}
       />

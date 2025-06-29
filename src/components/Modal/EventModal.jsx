@@ -4,9 +4,9 @@ import googleMeetIcon from '/src/assets/images/popup-icons/google-meet.png';
 import eyeIcon from '/src/assets/images/popup-icons/eye-icon.png';
 import downloadIcon from '/src/assets/images/popup-icons/download-icon.png';
 
-const EventModal = ({ title, candidate, interviewer, start, end, link, closeModal, moment }) => {
+const EventModal = ({ title, candidate, job_id, interviewer, start, end, link, closeModal, moment }) => {
   if (!title || !start || !end) return null;
-
+  console.log( interviewer)
   return (
     <div className="popup-overlay" onClick={closeModal}>
       <div className="popup-box" onClick={(e) => e.stopPropagation()}>
@@ -14,7 +14,7 @@ const EventModal = ({ title, candidate, interviewer, start, end, link, closeModa
         <div className="popup-inner">
           <div className="popup-left">
             <p><strong>Interview With:</strong> {candidate?.candidate_firstName || 'N/A'}</p>
-            <p><strong>Position:</strong> {title?.split('\n')[0] || 'N/A'}</p>
+            <p><strong>Position:</strong> {job_id?.jobRequest_Title || 'N/A'}</p>
             <p><strong>Created By:</strong> {interviewer?.firstName || '-'}</p>
             <p><strong>Interview Date:</strong> {new Date(start).toLocaleDateString()}</p>
             <p><strong>Interview Time:</strong> {moment(start).format('hh:mm A')} - {moment(end).format('hh:mm A')}</p>
