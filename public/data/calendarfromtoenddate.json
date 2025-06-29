@@ -1,152 +1,602 @@
 [
-    {
+  {
+    "id": 1,
+    "summary": "1st Round",
+    "desc": "1st Round",
+    "start": "2025-06-27T13:00:00+05:30",
+    "end": "2025-06-27T13:40:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "P": 8
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
         "id": 1,
-        "summary": "1st Round",
-        "desc": "1st Round",
-        "start": "2025-06-27T13:00:00+05:30",
-        "end": "2025-06-27T13:40:00+05:30",
-        "attendees": null,
-        "status": null,
-        "comment": null,
-        "score": {
-            "P": 8
-        },
-        "link": "http://www.hhh.com",
-        "user_det": {
-            "id": 1,
-            "question_score": null,
-            "status": null,
-            "candidate": {
-                "id": 1,
-                "candidate_firstName": "mohan",
-                "candidate_lastName": "raj",
-                "candidateGender": "male",
-                "candidateComment": "",
-                "candidate_email": "mohanrajk@dataterrain.com"
-            },
-            "handled_by": {
-                "id": 3,
-                "last_login": null,
-                "userEmail": "vinodhini_hr@dataterrain.com",
-                "username": "vinodhini_hr",
-                "firstName": "Vinodhini",
-                "lastName": "HR",
-                "userRole": "hr_employee"
-            },
-            "job_id": {
-                "id": 11,
-                "jobRequest_Title": "django developer",
-                "jobRequest_Role": "software engineer",
-                "jobRequest_KeySkills": "django",
-                "jobRequest_Description": "asfffasf"
-            }
-        },
-        "job_id": {
-            "id": 11,
-            "jobRequest_Title": "django developer",
-            "jobRequest_Role": "software engineer",
-            "jobRequest_KeySkills": "django",
-            "jobRequest_Description": "asfffasf"
-        }
-    },
-    {
-        "id": 2,
-        "summary": "Test",
-        "desc": "Test",
-        "start": "2025-08-27T18:00:00+05:30",
-        "end": "2025-08-27T18:40:00+05:30",
-        "attendees": null,
-        "status": null,
-        "comment": null,
-        "score": {
-            "p": 7
-        },
-        "link": "http://www.hhh.com",
-        "user_det": {
-            "id": 1,
-            "question_score": null,
-            "status": null,
-            "candidate": {
-                "id": 1,
-                "candidate_firstName": "mohan",
-                "candidate_lastName": "raj",
-                "candidateGender": "male",
-                "candidateComment": "",
-                "candidate_email": "mohanrajk@dataterrain.com"
-            },
-            "handled_by": {
-                "id": 3,
-                "last_login": null,
-                "userEmail": "vinodhini_hr@dataterrain.com",
-                "username": "vinodhini_hr",
-                "firstName": "Vinodhini",
-                "lastName": "HR",
-                "userRole": "hr_employee"
-            },
-            "job_id": {
-                "id": 11,
-                "jobRequest_Title": "django developer",
-                "jobRequest_Role": "software engineer",
-                "jobRequest_KeySkills": "django",
-                "jobRequest_Description": "asfffasf"
-            }
-        },
-        "job_id": {
-            "id": 11,
-            "jobRequest_Title": "django developer",
-            "jobRequest_Role": "software engineer",
-            "jobRequest_KeySkills": "django",
-            "jobRequest_Description": "asfffasf"
-        }
-    },
-    {
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
         "id": 3,
-        "summary": "2nd Round",
-        "desc": "2nd Round",
-        "start": "2025-08-27T18:00:00+05:30",
-        "end": "2025-08-27T18:40:00+05:30",
-        "attendees": null,
-        "status": null,
-        "comment": null,
-        "score": {
-            "o": 6
-        },
-        "link": "http://www.hhh.com",
-        "user_det": {
-            "id": 1,
-            "question_score": null,
-            "status": null,
-            "candidate": {
-                "id": 1,
-                "candidate_firstName": "mohan",
-                "candidate_lastName": "raj",
-                "candidateGender": "male",
-                "candidateComment": "",
-                "candidate_email": "mohanrajk@dataterrain.com"
-            },
-            "handled_by": {
-                "id": 3,
-                "last_login": null,
-                "userEmail": "vinodhini_hr@dataterrain.com",
-                "username": "vinodhini_hr",
-                "firstName": "Vinodhini",
-                "lastName": "HR",
-                "userRole": "hr_employee"
-            },
-            "job_id": {
-                "id": 11,
-                "jobRequest_Title": "django developer",
-                "jobRequest_Role": "software engineer",
-                "jobRequest_KeySkills": "django",
-                "jobRequest_Description": "asfffasf"
-            }
-        },
-        "job_id": {
-            "id": 11,
-            "jobRequest_Title": "django developer",
-            "jobRequest_Role": "software engineer",
-            "jobRequest_KeySkills": "django",
-            "jobRequest_Description": "asfffasf"
-        }
+        "last_login": null,
+        "userEmail": "vinodhini_hr@dataterrain.com",
+        "username": "vinodhini_hr",
+        "firstName": "Vinodhini",
+        "lastName": "HR",
+        "userRole": "hr_employee"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
     }
+  },
+  {
+    "id": 2,
+    "summary": "Test",
+    "desc": "Test",
+    "start": "2025-08-27T18:00:00+05:30",
+    "end": "2025-08-27T18:40:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "p": 7
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 3,
+        "last_login": null,
+        "userEmail": "vinodhini_hr@dataterrain.com",
+        "username": "vinodhini_hr",
+        "firstName": "Vinodhini",
+        "lastName": "HR",
+        "userRole": "hr_employee"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    }
+  },
+  {
+    "id": 3,
+    "summary": "2nd Round",
+    "desc": "2nd Round",
+    "start": "2025-08-27T18:00:00+05:30",
+    "end": "2025-08-27T18:40:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "o": 6
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 3,
+        "last_login": null,
+        "userEmail": "vinodhini_hr@dataterrain.com",
+        "username": "vinodhini_hr",
+        "firstName": "Vinodhini",
+        "lastName": "HR",
+        "userRole": "hr_employee"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    }
+  },
+  {
+    "summary": "Final Round",
+    "desc": "Final Round Discussion",
+    "start": "2025-09-01T15:00:00+05:30",
+    "end": "2025-09-01T15:45:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "F": 9
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 4,
+        "last_login": null,
+        "userEmail": "alex@dataterrain.com",
+        "username": "alex",
+        "firstName": "Alex",
+        "lastName": "Manager",
+        "userRole": "hr_manager"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    },
+    "id": 4
+  },
+  {
+    "summary": "Tech Screening",
+    "desc": "Technical skills test",
+    "start": "2025-09-02T10:00:00+05:30",
+    "end": "2025-09-02T10:45:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "T": 7
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 5,
+        "last_login": null,
+        "userEmail": "tech1@dataterrain.com",
+        "username": "tech1",
+        "firstName": "Priya",
+        "lastName": "Tech",
+        "userRole": "interviewer"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    },
+    "id": 5
+  },
+  {
+    "summary": "HR Check",
+    "desc": "HR process validation",
+    "start": "2025-09-02T10:00:00+05:30",
+    "end": "2025-09-02T10:45:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "H": 8
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 6,
+        "last_login": null,
+        "userEmail": "hr2@dataterrain.com",
+        "username": "hr2",
+        "firstName": "Neha",
+        "lastName": "HR",
+        "userRole": "hr_employee"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    },
+    "id": 6
+  },
+  {
+    "id": 7,
+    "summary": "Intro Call",
+    "desc": "Intro Call discussion",
+    "start": "2025-07-10T11:00:00+05:30",
+    "end": "2025-07-10T11:45:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "I": 7
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 10,
+        "last_login": null,
+        "userEmail": "user0@dataterrain.com",
+        "username": "user0",
+        "firstName": "Ravi",
+        "lastName": "User",
+        "userRole": "interviewer"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    }
+  },
+  {
+    "id": 8,
+    "summary": "Tech Round",
+    "desc": "Tech Round discussion",
+    "start": "2025-07-11T11:00:00+05:30",
+    "end": "2025-07-11T11:45:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "T": 8
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 11,
+        "last_login": null,
+        "userEmail": "user1@dataterrain.com",
+        "username": "user1",
+        "firstName": "Kiran",
+        "lastName": "User",
+        "userRole": "interviewer"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    }
+  },
+  {
+    "id": 9,
+    "summary": "Manager Round",
+    "desc": "Manager Round discussion",
+    "start": "2025-07-12T11:00:00+05:30",
+    "end": "2025-07-12T11:45:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "M": 9
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 12,
+        "last_login": null,
+        "userEmail": "user2@dataterrain.com",
+        "username": "user2",
+        "firstName": "Swathi",
+        "lastName": "User",
+        "userRole": "interviewer"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    }
+  },
+  {
+    "id": 10,
+    "summary": "Follow-up",
+    "desc": "Follow-up discussion",
+    "start": "2025-08-05T11:00:00+05:30",
+    "end": "2025-08-05T11:45:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "F": 6
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 10,
+        "last_login": null,
+        "userEmail": "user0@dataterrain.com",
+        "username": "user0",
+        "firstName": "Deepa",
+        "lastName": "User",
+        "userRole": "interviewer"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    }
+  },
+  {
+    "id": 11,
+    "summary": "Team Fit",
+    "desc": "Team Fit discussion",
+    "start": "2025-08-06T11:00:00+05:30",
+    "end": "2025-08-06T11:45:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "U": 7
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 11,
+        "last_login": null,
+        "userEmail": "user1@dataterrain.com",
+        "username": "user1",
+        "firstName": "Naveen",
+        "lastName": "User",
+        "userRole": "interviewer"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    }
+  },
+  {
+    "id": 12,
+    "summary": "Offer Discussion",
+    "desc": "Offer Discussion discussion",
+    "start": "2025-08-07T11:00:00+05:30",
+    "end": "2025-08-07T11:45:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "O": 10
+    },
+    "link": "http://www.hhh.com",
+    "user_det": {
+      "id": 1,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 1,
+        "candidate_firstName": "mohan",
+        "candidate_lastName": "raj",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "mohanrajk@dataterrain.com"
+      },
+      "handled_by": {
+        "id": 12,
+        "last_login": null,
+        "userEmail": "user2@dataterrain.com",
+        "username": "user2",
+        "firstName": "Asha",
+        "lastName": "User",
+        "userRole": "interviewer"
+      },
+      "job_id": {
+        "id": 11,
+        "jobRequest_Title": "django developer",
+        "jobRequest_Role": "software engineer",
+        "jobRequest_KeySkills": "django",
+        "jobRequest_Description": "asfffasf"
+      }
+    },
+    "job_id": {
+      "id": 11,
+      "jobRequest_Title": "django developer",
+      "jobRequest_Role": "software engineer",
+      "jobRequest_KeySkills": "django",
+      "jobRequest_Description": "asfffasf"
+    }
+  }
 ]
