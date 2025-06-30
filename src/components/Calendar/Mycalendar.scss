@@ -16,8 +16,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px $popup-overlay;
+  background: $popup-overlay;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +85,7 @@
   position: absolute;
   top: 0;
   right: 0px;
-  background: #fdbf2d;
+  background: $badge-yellow;
   color: $black;
   font-weight: bold;
   padding: 5px 7px;
@@ -96,7 +96,7 @@
 
 .nested-event-item {
   display: flex;
-  border: 1px solid #ddd;
+  border: 1px solid $light-border;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
@@ -142,10 +142,10 @@
   &::-webkit-scrollbar-thumb {
     background-color: $gray;
     border-radius: 4px;
-  }
 
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: $gray;
+    &:hover {
+      background-color: $gray;
+    }
   }
 
   .rbc-time-header {
@@ -221,7 +221,7 @@
       border-radius: 5px;
       padding: 10px 0 10px 10px;
       overflow: unset;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px $shadow;
     }
   }
 }

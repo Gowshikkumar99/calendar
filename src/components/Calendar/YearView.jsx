@@ -2,6 +2,7 @@ import React from "react";
 import moment from "moment";
 import { Navigate, Views } from "react-big-calendar";
 import { useCalendar } from "../../context/CalendarContext";
+import "/src/components/Calendar/YearView.scss";
 
 const YearView = ({ date, events, onNavigate, onView }) => {
   const { setDate, setView } = useCalendar();
@@ -37,47 +38,6 @@ const YearView = ({ date, events, onNavigate, onView }) => {
 
   return (
     <>
-      <style>{`
-        .yearview-container {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 1rem;
-          padding: 1rem;
-        }
-        .month {
-          border: 1px solid #ccc;
-          padding: 0.5rem;
-          background: #fff;
-        }
-        .month h4 {
-          margin-bottom: 0.5rem;
-          text-align: center;
-        }
-        .month-grid {
-          display: grid;
-          grid-template-columns: repeat(7, 1fr);
-          gap: 2px;
-        }
-        .day-cell {
-          background: #f9f9f9;
-          padding: 4px;
-          font-size: 0.75rem;
-          min-height: 40px;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-        .day-cell.has-event {
-          background-color: #c9e6ff;
-        }
-        .day-cell.has-multiple {
-          background-color: #ffa9a9;
-        }
-        .date-number {
-          font-weight: bold;
-          font-size: 0.8rem;
-        }
-      `}</style>
-
       <div className="yearview-container">
         {months.map((days, i) => (
           <div className="month" key={i}>

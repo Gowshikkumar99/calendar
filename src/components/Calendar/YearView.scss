@@ -1,50 +1,68 @@
+@import "../../colors.scss";
+
 .yearview-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 1rem;
-}
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 16px;
+  overflow: auto;
 
-.month {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 0.75rem;
-  padding: 0.75rem;
-}
+    &::-webkit-scrollbar {
+    width: 6px;
+  }
 
-.month h4 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-.month-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 2px;
-}
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray;
+    border-radius: 4px;
 
-.day-cell {
-  min-height: 60px;
-  font-size: 0.75rem;
-  padding: 2px;
-  border: 1px solid #eee;
-  position: relative;
-  background: #f9f9f9;
-}
+    &:hover {
+      background-color: $gray;
+    }
+  }
 
-.day-cell .date-number {
-  font-weight: bold;
-  font-size: 0.8rem;
-}
+  .month {
+    border: 1px solid $gray;
+    padding: 8px;
+    background: $white;
+    border-radius: 12px;
 
-.not-current-month {
-  opacity: 0.4;
-}
+    h4 {
+      margin-bottom: 8px;
+      text-align: center;
+    }
 
-.yearview-event {
-  background-color: #eaf3ff;
-  padding: 2px;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  margin-top: 2px;
+    .month-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+
+      .day-cell {
+        background: $light-gray;
+        padding: 4px;
+        font-size: 12px;
+        min-height: 40px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid $border-gray;
+        position: relative;
+
+        .date-number {
+          font-weight: bold;
+          font-size: 13px;
+        }
+
+        &.has-event {
+          background-color: $event-blue;
+        }
+
+        &.has-multiple {
+          background-color: $event-red;
+        }
+      }
+    }
+  }
 }
