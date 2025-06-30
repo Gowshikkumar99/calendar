@@ -56,19 +56,20 @@ const NestedEventModal = ({
       </div>
       <div className="nested-modal-content">
         {nestedEvents.map((ev, i) => (
-          <div className="nested-event-card" key={i}>
+          <div
+            className="nested-event-card"
+            key={i}
+            onClick={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              onSelect(ev);
+              setTimeout(() => onClose(), 0);
+            }}
+          >
             <div className="event-wrapper">
               <div className="event-title">{ev.job_id.jobRequest_Title}</div>
               <div className="event-actions">
-                <button
-                  className="edit-btn nested-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    e.preventDefault();
-                    onSelect(ev);
-                    setTimeout(() => onClose(), 0);
-                  }}
-                >
+                <button className="edit-btn nested-btn">
                   <img src={editIcon} loading="lazy" alt="Edit Icon" />
                 </button>
                 <button
@@ -86,10 +87,10 @@ const NestedEventModal = ({
                 )}
                 <>|</>
                 {ev.interviewer?.firstName && (
-                <div className="event-interviewer">
-                  Interviewer: {ev.interviewer.firstName}
-                </div>
-              )}
+                  <div className="event-interviewer">
+                    Interviewer: {ev.interviewer.firstName}
+                  </div>
+                )}
               </div>
 
               <div className="event-meta-row">

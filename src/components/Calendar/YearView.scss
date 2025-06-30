@@ -1,0 +1,50 @@
+.yearview-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.month {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+.month h4 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.day-cell {
+  min-height: 60px;
+  font-size: 0.75rem;
+  padding: 2px;
+  border: 1px solid #eee;
+  position: relative;
+  background: #f9f9f9;
+}
+
+.day-cell .date-number {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.not-current-month {
+  opacity: 0.4;
+}
+
+.yearview-event {
+  background-color: #eaf3ff;
+  padding: 2px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  margin-top: 2px;
+}

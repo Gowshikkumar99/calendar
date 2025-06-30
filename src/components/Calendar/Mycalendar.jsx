@@ -12,6 +12,7 @@ import CustomToolbar from "../CustomToolbar/CustomToolbar";
 import NestedEventModal from "../NestedModal/NestedModals.jsx";
 import CustomEvent from "../CustomEvent/CustomEvent.jsx";
 import DateHeader from "../DateHeader/DateHeader.jsx";
+import YearView from "/src/components/Calendar/YearView.jsx";
 
 const localizer = momentLocalizer(moment);
 const DnDCalendar = withDragAndDrop(Calendar);
@@ -105,7 +106,6 @@ const MyCalendar = () => {
     return () => document.body.classList.remove("modal-open");
   }, [selectedEvent]);
 
-
   useEffect(() => {
     const fetchMain = fetch(
       `${import.meta.env.BASE_URL}data/calendarfromtoenddate.json`
@@ -174,8 +174,15 @@ const MyCalendar = () => {
         date={date}
         view={view}
         onView={setView}
-        onNavigate={setDate}
-        views={[Views.DAY, Views.WEEK, Views.MONTH, Views.AGENDA]}
+        onNavigate={(date) => {
+          setDate(new Date(date));
+        }}
+        views={{
+          day: true,
+          week: true,
+          month: true,
+          year: YearView,
+        }}
         step={60}
         timeslots={1}
         min={new Date(new Date().setHours(calendarStartHour, 0))}
@@ -183,7 +190,9 @@ const MyCalendar = () => {
         onEventDrop={moveEvent}
         onSelectEvent={(event, e) => handleSelectEvent(event, e)}
         components={{
-          toolbar: CustomToolbar,
+          toolbar: (props) => (
+            <CustomToolbar {...props} setYearFilter={setYearFilter} />
+          ),
           event: CustomEvent,
           week: {
             header: DateHeader,

@@ -6,7 +6,7 @@ import rightArrow from "../../assets/images/customToolbar/right-arrow.png";
 import plusIcon from "../../assets/images/common/plus-icon.png";
 import "../CustomToolbar/CustomToolbar.scss";
 
-const CustomToolbar = ({ date, view, onNavigate, onView }) => {
+const CustomToolbar = ({ date, view, onNavigate, onView, setYearFilter }) => {
   const goToToday = () => {
     onNavigate(navigate.TODAY);
   };
@@ -21,14 +21,26 @@ const CustomToolbar = ({ date, view, onNavigate, onView }) => {
 
   const changeView = (newView) => {
     onView(newView);
+    if (newView !== "year") {
+      setYearFilter(null);
+    }
   };
 
   const formattedLabel = () => {
+    if (view === "year") {
+      return `${moment(date).format("YYYY")}`;
+    }
+
     if (view === "week") {
       const start = moment(date).startOf("week");
       const end = moment(date).endOf("week");
       return `${start.format("DD MMMM")} to ${end.format("DD MMMM, YYYY")}`;
     }
+
+    // if (view === "year") {
+    //   return `Year: ${moment(date).format("YYYY")}`;
+    // }
+
     return moment(date).format("DD MMMM, YYYY");
   };
 
@@ -95,13 +107,14 @@ const CustomToolbar = ({ date, view, onNavigate, onView }) => {
           <button
             type="button"
             className={
-              view === "agenda"
+              view === "year"
                 ? "rbc-btn-nav rbc-btn active"
                 : "rbc-btn-nav rbc-btn"
             }
             onClick={() => {
-              changeView("agenda");
-              // setYearFilter(new Date(date).getFullYear());
+              const year = new Date(date).getFullYear();
+              changeView("year");
+              setYearFilter(year);
             }}
           >
             Year

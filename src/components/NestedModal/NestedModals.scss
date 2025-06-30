@@ -37,6 +37,7 @@
       position: relative;
       margin: 10px 0;
       border-bottom: 1px solid $gray;
+      cursor: pointer;
       
       &:last-child {
         border-bottom: none;
