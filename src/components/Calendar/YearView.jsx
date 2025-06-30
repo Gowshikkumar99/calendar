@@ -1,8 +1,10 @@
 import React from "react";
 import moment from "moment";
-import { Navigate } from "react-big-calendar";
+import { Navigate, Views } from "react-big-calendar";
+import { useCalendar } from "../../context/CalendarContext";
 
 const YearView = ({ date, events, onNavigate, onView }) => {
+  const { setDate, setView } = useCalendar();
   const months = Array.from({ length: 12 }, (_, i) => {
     const start = moment(date).month(i).startOf("month");
     const end = moment(date).month(i).endOf("month");
@@ -18,11 +20,8 @@ const YearView = ({ date, events, onNavigate, onView }) => {
   });
 
   const handleDayClick = (day) => {
-    if (onNavigate && onView) {
-      const selectedDate = day.toDate();
-      onView("day");
-      onNavigate(selectedDate);
-    }
+    setDate(day.toDate());
+    setView(Views.DAY);
   };
 
   const renderEvents = (day) => {
@@ -101,7 +100,6 @@ const YearView = ({ date, events, onNavigate, onView }) => {
   );
 };
 
-// Static methods required for custom views
 YearView.range = (date, { localizer }) => {
   const start = localizer.startOf(date, "year");
   const end = localizer.endOf(date, "year");

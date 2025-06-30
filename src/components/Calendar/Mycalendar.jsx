@@ -14,6 +14,9 @@ import CustomEvent from "../CustomEvent/CustomEvent.jsx";
 import DateHeader from "../DateHeader/DateHeader.jsx";
 import YearView from "/src/components/Calendar/YearView.jsx";
 
+//context
+import { useCalendar } from "../../context/CalendarContext.jsx";
+
 const localizer = momentLocalizer(moment);
 const DnDCalendar = withDragAndDrop(Calendar);
 
@@ -22,12 +25,11 @@ const calendarEndHour = 19;
 
 const MyCalendar = () => {
   const [events, setEvents] = useState([]);
-  const [date, setDate] = useState(new Date());
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const [view, setView] = useState(Views.WEEK);
   const [nestedEvents, setNestedEvents] = useState(null);
   const [modalPosition, setModalPosition] = useState(null);
   const [yearFilter, setYearFilter] = useState(null);
+  const { date, setDate, view, setView } = useCalendar();
 
   const handleDeleteEvent = (eventToDelete) => {
     const updatedEvents = events.flatMap((ev) => {
