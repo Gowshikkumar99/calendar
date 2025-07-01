@@ -200,6 +200,10 @@
 
 .rbc-month-view {
   .rbc-month-row {
+    min-height: 150px;
+    @media screen and (min-width: 1024px) {
+      min-height: 120px;
+    }
     .rbc-date-cell {
       display: flex;
       justify-content: center;
